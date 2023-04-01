@@ -25,5 +25,13 @@ namespace UserTest
             string result = user.ValidateLastName(name);
             Assert.AreEqual(result, "valid");
         }
+        [Test]
+        public void GivenMail_WhenAnalyze_ShouldReturnValid()
+        {
+            string mail = "abc.xyz@brizdgelabz.co.in";
+            User user = new User();
+            string result = user.ValidateMailID(mail);
+            Assert.AreEqual(result, "valid");
+        }
     }
 }

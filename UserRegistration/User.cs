@@ -4,7 +4,8 @@ namespace UserRegistration
     public class User
     {
         public static string NAME_REGX = "^[A-Z]{1}[a-z]{2,}$";
-        public static string Mail_ID = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
+        public static string Mail_ID = "^[a-zA-Z]+[.+_]{1}[a-zA-Z]+[@]{1}[a-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
+       // public static string Mail_ID = "^[a-zA-Z]+[.+_]{1}[a-zA-Z]";
         public string ValidateFirstName(string firstName)
         {
             if (Regex.IsMatch(firstName, NAME_REGX))
@@ -17,9 +18,9 @@ namespace UserRegistration
             }
 
         }
-        public string ValidateLastName(string firstName)
+        public string ValidateLastName(string lastName)
         {
-            if (Regex.IsMatch(firstName, NAME_REGX))
+            if (Regex.IsMatch(lastName, NAME_REGX))
             {
                 return "valid";
             }
@@ -28,6 +29,17 @@ namespace UserRegistration
                 return "Invalid";
             }
         }
-      
+        public string ValidateMailID(string mail)
+        {
+            if (Regex.IsMatch((string)mail, Mail_ID))
+            {
+                return "valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+
+        }
     }
 }
