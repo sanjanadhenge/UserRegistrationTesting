@@ -36,7 +36,7 @@ namespace UserTest
         [Test]
         public void GivenMobileNumber_WhenAnalyze_ShouldReturnValid()
         {
-            string mobile = "9135624879";
+            string mobile = "91 9135624879";
             User user = new User();
             string result = user.ValidateMobile(mobile);
             Assert.AreEqual(result, "valid");
