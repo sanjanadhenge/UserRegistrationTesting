@@ -66,6 +66,24 @@ namespace UserRegistration
                 return "Invalid";
             }
         }
+        public string ValidateMailIDArray(string[]arr)
+        {
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                string word = arr[i];
+                if (Regex.IsMatch(word, Mail_ID))
+                {
+                    return "valid";
+                }
+            else
+                {
+                    return "Invalid";
+                }
+            }
+            return "";
+
+        }
 
     }
 }
