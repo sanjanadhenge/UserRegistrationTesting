@@ -33,5 +33,13 @@ namespace UserTest
             string result = user.ValidateMailID(mail);
             Assert.AreEqual(result, "valid");
         }
+        [Test]
+        public void GivenMobileNumber_WhenAnalyze_ShouldReturnValid()
+        {
+            string mobile = "9135624879";
+            User user = new User();
+            string result = user.ValidateMobile(mobile);
+            Assert.AreEqual(result, "valid");
+        }
     }
 }
