@@ -44,7 +44,7 @@ namespace UserTest
         [Test]
         public void GivenPassword_WhenAnalyze_ShouldReturnValid()
         {
-            string pass = "Abcdef2023";
+            string pass = "Abcdefg2023";
             User user = new User();
             string result = user.ValidatePass(pass);
             Assert.AreEqual(result, "valid");
