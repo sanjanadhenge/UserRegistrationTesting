@@ -41,5 +41,13 @@ namespace UserTest
             string result = user.ValidateMobile(mobile);
             Assert.AreEqual(result, "valid");
         }
+        [Test]
+        public void GivenPassword_WhenAnalyze_ShouldReturnValid()
+        {
+            string pass = "AbcdeF2023";
+            User user = new User();
+            string result = user.ValidatePass(pass);
+            Assert.AreEqual(result, "valid");
+        }
     }
 }
